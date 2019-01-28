@@ -25,9 +25,11 @@ class EarthquakeListViewController: UITableViewController {
     let earthquakeCatalog = EarthquakeCatalog()
     var earthquakes: [Earthquake] = []
     
+    typealias localized = LocalizedStrings.EarthquakeList
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Earthquakes"
+        title = localized.title
         refreshEarthquakeData()
     }
     
@@ -54,11 +56,15 @@ private extension EarthquakeListViewController {
     
     func presentDownloadFailedAlert() {
         let alertController = UIAlertController(
-            title: "Failed to download Earthquake Catalog",
+            title: localized.errorAlertTitle,
             message: nil,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okAction = UIAlertAction(
+            title: localized.okButtonTitle,
+            style: .default,
+            handler: nil
+        )
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
@@ -70,7 +76,7 @@ extension EarthquakeListViewController {
     
     var emptyStateCell: UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "Downloading earthquake data..."
+        cell.textLabel?.text = localized.downloadInProgressMessage
         return cell
     }
 

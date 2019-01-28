@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  EarthquakeCatalog
+
+  Created by Michael Baldwin on 1/28/19.
+  Copyright © 2019 mikebaldwin.co. All rights reserved.
+*/
+
+"earthquakeListTitle" = "Earthquakes";
+
+"downloadErrorAlertTitle" = "Failed to download Earthquake Catalog";
+"okButtonTitle" = "OK";
+
+"downloadingMessage" = "Downloading earthquake data...";
