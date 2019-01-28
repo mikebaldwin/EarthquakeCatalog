@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9E939CAA21FF98BF00ACE584 /* App */,
-				9E939CAB21FF98CD00ACE584 /* Catalog */,
+				9E939CAB21FF98CD00ACE584 /* EarthquakeList */,
 				9E939CA921FF988D00ACE584 /* Networking */,
 			);
 			path = Source;
@@ -114,13 +114,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		9E939CAB21FF98CD00ACE584 /* Catalog */ = {
+		9E939CAB21FF98CD00ACE584 /* EarthquakeList */ = {
 			isa = PBXGroup;
 			children = (
 				9E939CB421FF9B8F00ACE584 /* Earthquake.swift */,
 				9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */,
 			);
-			path = Catalog;
+			path = EarthquakeList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
