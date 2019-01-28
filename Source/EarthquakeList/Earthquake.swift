@@ -18,6 +18,7 @@ struct Earthquake {
     let url: String
     let detailUrl: String
     let title: String
+    let type: String
 }
 
 extension Earthquake: Decodable {
@@ -36,6 +37,7 @@ extension Earthquake: Decodable {
         case url
         case detailUrl = "detail"
         case title
+        case type
     }
     
     init(from decoder: Decoder) throws {
@@ -54,5 +56,6 @@ extension Earthquake: Decodable {
         url = try propertiesValues.decode(String.self, forKey: .url)
         detailUrl = try propertiesValues.decode(String.self, forKey: .detailUrl)
         title = try propertiesValues.decode(String.self, forKey: .title)
+        type = try propertiesValues.decode(String.self, forKey: .type)
     }
 }

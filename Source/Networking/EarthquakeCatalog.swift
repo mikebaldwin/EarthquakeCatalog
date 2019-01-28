@@ -38,7 +38,10 @@ struct EarthquakeCatalog {
             }
             if let data = data {
                 do {
-                    let earthquakes = try JSONDecoder().decode(RootData.self, from: data).earthquakes
+                    let earthquakes = try JSONDecoder()
+                        .decode(RootData.self, from: data)
+                        .earthquakes
+                        .filter { $0.type == "earthquake" }
                     success(earthquakes)
                 } catch {
                     failure(error)
