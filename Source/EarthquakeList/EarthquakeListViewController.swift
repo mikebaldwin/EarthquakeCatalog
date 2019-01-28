@@ -84,8 +84,14 @@ extension EarthquakeListViewController {
     
     func configure(_ cell: UITableViewCell, at indexPath: IndexPath) {
         let earthquake = earthquakes[indexPath.row]
-        cell.textLabel?.text = earthquake.title
-        cell.detailTextLabel?.text = "Detail text"
+        cell.textLabel?.text = earthquake.location
+        
+        let timeInterval = TimeInterval(earthquake.timeZone)
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        cell.detailTextLabel?.text = "M \(earthquake.magnitude) - \(formatter.string(from: date))"
+        
         cell.accessoryType = .disclosureIndicator
     }
     
