@@ -12,7 +12,8 @@
 		9E939C9421FF949C00ACE584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E939C9221FF949C00ACE584 /* LaunchScreen.storyboard */; };
 		9E939C9F21FF949C00ACE584 /* EarthquakeCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939C9E21FF949C00ACE584 /* EarthquakeCatalogTests.swift */; };
 		9E939CAD21FF996100ACE584 /* EarthquakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */; };
-		9E939CAF21FF99D500ACE584 /* EarthquakeCatalogApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */; };
+		9E939CAF21FF99D500ACE584 /* EarthquakeCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CAE21FF99D500ACE584 /* EarthquakeCatalog.swift */; };
+		9E939CB521FF9B8F00ACE584 /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CB421FF9B8F00ACE584 /* Earthquake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,8 @@
 		9E939C9E21FF949C00ACE584 /* EarthquakeCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCatalogTests.swift; sourceTree = "<group>"; };
 		9E939CA021FF949C00ACE584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeListViewController.swift; sourceTree = "<group>"; };
-		9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCatalogApi.swift; sourceTree = "<group>"; };
+		9E939CAE21FF99D500ACE584 /* EarthquakeCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCatalog.swift; sourceTree = "<group>"; };
+		9E939CB421FF9B8F00ACE584 /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 		9E939CA921FF988D00ACE584 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */,
+				9E939CAE21FF99D500ACE584 /* EarthquakeCatalog.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 		9E939CAB21FF98CD00ACE584 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				9E939CB421FF9B8F00ACE584 /* Earthquake.swift */,
 				9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */,
 			);
 			path = Catalog;
@@ -221,7 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E939C8A21FF949B00ACE584 /* AppDelegate.swift in Sources */,
-				9E939CAF21FF99D500ACE584 /* EarthquakeCatalogApi.swift in Sources */,
+				9E939CAF21FF99D500ACE584 /* EarthquakeCatalog.swift in Sources */,
+				9E939CB521FF9B8F00ACE584 /* Earthquake.swift in Sources */,
 				9E939CAD21FF996100ACE584 /* EarthquakeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
