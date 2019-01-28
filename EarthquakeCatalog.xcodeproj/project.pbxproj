@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9E939C8A21FF949B00ACE584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939C8921FF949B00ACE584 /* AppDelegate.swift */; };
-		9E939C8C21FF949B00ACE584 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939C8B21FF949B00ACE584 /* ViewController.swift */; };
-		9E939C8F21FF949B00ACE584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E939C8D21FF949B00ACE584 /* Main.storyboard */; };
 		9E939C9121FF949C00ACE584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E939C9021FF949C00ACE584 /* Assets.xcassets */; };
 		9E939C9421FF949C00ACE584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E939C9221FF949C00ACE584 /* LaunchScreen.storyboard */; };
 		9E939C9F21FF949C00ACE584 /* EarthquakeCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939C9E21FF949C00ACE584 /* EarthquakeCatalogTests.swift */; };
+		9E939CAD21FF996100ACE584 /* EarthquakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */; };
+		9E939CAF21FF99D500ACE584 /* EarthquakeCatalogApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		9E939C8621FF949B00ACE584 /* EarthquakeCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthquakeCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E939C8921FF949B00ACE584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E939C8B21FF949B00ACE584 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E939C8E21FF949B00ACE584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E939C9021FF949C00ACE584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E939C9321FF949C00ACE584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E939C9521FF949C00ACE584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E939C9A21FF949C00ACE584 /* EarthquakeCatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakeCatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E939C9E21FF949C00ACE584 /* EarthquakeCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCatalogTests.swift; sourceTree = "<group>"; };
 		9E939CA021FF949C00ACE584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeListViewController.swift; sourceTree = "<group>"; };
+		9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCatalogApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		9E939C7D21FF949B00ACE584 = {
 			isa = PBXGroup;
 			children = (
-				9E939C8821FF949B00ACE584 /* EarthquakeCatalog */,
+				9E939C8821FF949B00ACE584 /* Source */,
 				9E939C9D21FF949C00ACE584 /* EarthquakeCatalogTests */,
 				9E939C8721FF949B00ACE584 /* Products */,
 			);
@@ -74,17 +74,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9E939C8821FF949B00ACE584 /* EarthquakeCatalog */ = {
+		9E939C8821FF949B00ACE584 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9E939C8921FF949B00ACE584 /* AppDelegate.swift */,
-				9E939C8B21FF949B00ACE584 /* ViewController.swift */,
-				9E939C8D21FF949B00ACE584 /* Main.storyboard */,
-				9E939C9021FF949C00ACE584 /* Assets.xcassets */,
-				9E939C9221FF949C00ACE584 /* LaunchScreen.storyboard */,
-				9E939C9521FF949C00ACE584 /* Info.plist */,
+				9E939CAA21FF98BF00ACE584 /* App */,
+				9E939CAB21FF98CD00ACE584 /* Catalog */,
+				9E939CA921FF988D00ACE584 /* Networking */,
 			);
-			path = EarthquakeCatalog;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		9E939C9D21FF949C00ACE584 /* EarthquakeCatalogTests */ = {
@@ -94,6 +91,33 @@
 				9E939CA021FF949C00ACE584 /* Info.plist */,
 			);
 			path = EarthquakeCatalogTests;
+			sourceTree = "<group>";
+		};
+		9E939CA921FF988D00ACE584 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9E939CAE21FF99D500ACE584 /* EarthquakeCatalogApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9E939CAA21FF98BF00ACE584 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9E939C8921FF949B00ACE584 /* AppDelegate.swift */,
+				9E939C9021FF949C00ACE584 /* Assets.xcassets */,
+				9E939C9221FF949C00ACE584 /* LaunchScreen.storyboard */,
+				9E939C9521FF949C00ACE584 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9E939CAB21FF98CD00ACE584 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				9E939CAC21FF996100ACE584 /* EarthquakeListViewController.swift */,
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +203,6 @@
 			files = (
 				9E939C9421FF949C00ACE584 /* LaunchScreen.storyboard in Resources */,
 				9E939C9121FF949C00ACE584 /* Assets.xcassets in Resources */,
-				9E939C8F21FF949B00ACE584 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E939C8C21FF949B00ACE584 /* ViewController.swift in Sources */,
 				9E939C8A21FF949B00ACE584 /* AppDelegate.swift in Sources */,
+				9E939CAF21FF99D500ACE584 /* EarthquakeCatalogApi.swift in Sources */,
+				9E939CAD21FF996100ACE584 /* EarthquakeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +245,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9E939C8D21FF949B00ACE584 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E939C8E21FF949B00ACE584 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9E939C9221FF949C00ACE584 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
-				INFOPLIST_FILE = EarthquakeCatalog/Info.plist;
+				INFOPLIST_FILE = Source/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84MPEV8978;
-				INFOPLIST_FILE = EarthquakeCatalog/Info.plist;
+				INFOPLIST_FILE = Source/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
