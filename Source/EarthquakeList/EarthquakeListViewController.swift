@@ -35,7 +35,7 @@ class EarthquakeListViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshEarthquakeData), for: .valueChanged)
         
-        getEarthquakeData(completion: nil)
+        getEarthquakeDataForTableView(completion: nil)
     }
     
 }
@@ -46,12 +46,12 @@ private extension EarthquakeListViewController {
     @objc
     func refreshEarthquakeData() {
         refreshControl?.beginRefreshing()
-        getEarthquakeData(completion: {
+        getEarthquakeDataForTableView(completion: {
             self.refreshControl?.endRefreshing()
         })
     }
     
-    func getEarthquakeData(completion: (() -> Void)?) {
+    func getEarthquakeDataForTableView(completion: (() -> Void)?) {
         earthquakeCatalog.earthquakesFromLast30Days(
             // Refresh data and reload tableview
             success: { [weak self] earthquakes in
