@@ -29,21 +29,37 @@ class EarthquakeListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = localized.title
-        refreshEarthquakeData()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshEarthquakeData), for: .valueChanged)
+        
+        getEarthquakeData(completion: nil)
     }
     
 }
 
 private extension EarthquakeListViewController {
     
+    @objc
     func refreshEarthquakeData() {
+        refreshControl?.beginRefreshing()
+        getEarthquakeData(completion: {
+            self.refreshControl?.endRefreshing()
+        })
+    }
+    
+    func getEarthquakeData(completion: (() -> Void)?) {
         earthquakeCatalog.earthquakesFromLast30Days(
             // Refresh data and reload tableview
             success: { [weak self] earthquakes in
                 self?.earthquakes = earthquakes
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
+                    if let completion = completion {
+                        completion()
+                    }
                 }
             },
             // Display an alert to the user
