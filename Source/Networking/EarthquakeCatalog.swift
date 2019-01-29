@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate struct RootData: Decodable {
+private struct RootData: Decodable {
     let earthquakes: [Earthquake]
     
     enum CodingKeys: String, CodingKey {
@@ -23,12 +23,12 @@ fileprivate struct RootData: Decodable {
 
 struct EarthquakeCatalog {
     
-    var baseUrl = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson")
+    private var url = URL(string: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson")
     
     func earthquakesFromLast30Days(success: @escaping ([Earthquake]) -> Void,
                                    failure: @escaping (Error) -> Void) {
         // Assemble request
-        guard let url = baseUrl else {
+        guard let url = url else {
             fatalError("Programmer error: Couldn't create URL")
         }
         let request = URLRequest(url: url)
