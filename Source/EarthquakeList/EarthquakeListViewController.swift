@@ -87,6 +87,19 @@ private extension EarthquakeListViewController {
 
 }
 
+// Mark: - Helpers
+private extension EarthquakeListViewController {
+    
+    func timestamp(for earthquake: Earthquake) -> String {
+        let timeInterval = TimeInterval(earthquake.timeZone)
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        let date = Date(timeIntervalSince1970: timeInterval)
+        return formatter.string(from: date)
+    }
+
+}
+
 // MARK: - Table view data source + helpers
 extension EarthquakeListViewController {
     
@@ -107,13 +120,7 @@ extension EarthquakeListViewController {
     func configure(_ cell: UITableViewCell, at indexPath: IndexPath) {
         let earthquake = earthquakes[indexPath.row]
         cell.textLabel?.text = earthquake.location
-        
-        let timeInterval = TimeInterval(earthquake.timeZone)
-        let date = Date(timeIntervalSince1970: timeInterval)
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        cell.detailTextLabel?.text = "M \(earthquake.magnitude) - \(formatter.string(from: date))"
-        
+        cell.detailTextLabel?.text = "M \(earthquake.magnitude) - \(timestamp(for: earthquake))"
         cell.accessoryType = .disclosureIndicator
     }
     
