@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-// Mark: - Named Constants
+// MARK: - Named Constants
 private extension Int {
     static var tableSections = 1
 }
@@ -18,7 +18,7 @@ private extension String {
     static var cellId = "EarthquakeCell"
 }
 
-// Mark: - Class declaration
+// MARK: - Class declaration
 
 class EarthquakeListViewController: UITableViewController {
     
@@ -40,6 +40,7 @@ class EarthquakeListViewController: UITableViewController {
     
 }
 
+// MARK: - Networking
 private extension EarthquakeListViewController {
     
     @objc
@@ -70,6 +71,11 @@ private extension EarthquakeListViewController {
         )
     }
     
+}
+
+// MARK: - Helpers
+private extension EarthquakeListViewController {
+    
     func presentDownloadFailedAlert() {
         let alertController = UIAlertController(
             title: localized.errorAlertTitle,
@@ -84,11 +90,6 @@ private extension EarthquakeListViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-
-}
-
-// Mark: - Helpers
-private extension EarthquakeListViewController {
     
     func timestamp(for earthquake: Earthquake) -> String {
         let timeInterval = TimeInterval(earthquake.timeZone)
